@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Информатика — онлайн окуу платформасы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark">И</span>
+        <div>
+          <strong>Информатика</strong>
+          <small data-i18n="brandSub">Онлайн окуу платформасы</small>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <a href="#/home" data-route="home"><i>◧</i><span data-i18n="navHome">Башкы бет</span></a>
+        <a href="#/course" data-route="course"><i>☰</i><span data-i18n="navCourse">Курстун планы</span></a>
+        <a href="#/tests" data-route="tests"><i>✓</i><span data-i18n="navTests">Тесттер</span></a>
+        <a href="#/grades" data-route="grades"><i>%</i><span data-i18n="navGrades">Рейтинг жана баа</span></a>
+        <a href="#/library" data-route="library"><i>▤</i><span data-i18n="navLib">Адабияттар</span></a>
+        <a href="#/about" data-route="about"><i>i</i><span data-i18n="navAbout">Курс жөнүндө</span></a>
+      </nav>
+
+      <div class="side-progress">
+        <div class="side-progress-top">
+          <span data-i18n="progress">Прогресс</span>
+          <b id="sideProgressText">0%</b>
+        </div>
+        <div class="bar"><div class="bar-fill" id="sideProgressBar"></div></div>
+      </div>
+
+      <div class="side-foot">
+        <button class="chip" id="langBtn" title="Language">КЫР / РУС</button>
+        <button class="chip" id="themeBtn" title="Theme">◐</button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="burger" id="burger" aria-label="Menu">☰</button>
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Тема боюнча издөө…" autocomplete="off">
+          <div class="search-results" id="searchResults" hidden></div>
+        </div>
+        <div class="user">
+          <input id="userName" class="user-name" type="text" placeholder="Студенттин аты" maxlength="40">
+        </div>
+      </header>
+
+      <main id="view" class="view" tabindex="-1"></main>
+
+      <footer class="footer">
+        КЭУ «М. Рыскулбеков атындагы» · Экономикалык жана математикалык моделдөө жана санариптик технологиялар кафедрасы · 2026
+      </footer>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
